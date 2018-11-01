@@ -1,0 +1,604 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a, a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+/* CSS ELEMENTS */
+
+.content_area {
+  position:relative;
+  max-width:1200px;
+  margin: 0 auto;
+}
+
+.page_count .dot {
+  display: inline-block;
+  width:10px;
+  height:10px;
+  border: 2px solid #2568FF;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+
+.page_count .dot.is_active {
+  background:#2568FF
+}
+
+/* HEADER */
+
+header {
+  background: url('https://www.digitalocean.com/assets//media/homepage/hero-background-c9490927.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+/* HEADER NAV */
+
+nav {
+  width:100%;
+  height: 80px;
+  line-height: 80px;
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: 1;
+  font-weight: bold;
+  background: white;
+}
+
+.nav_section {
+  height: 80px;
+}
+
+.nav_logo {
+  max-width:100%;
+  max-height: 80%;
+}
+
+.nav_item{
+  color:white;
+  display: inline-block;
+  list-style: none;
+  margin-left: 25px;
+  line-height: 80px;
+  font-size: 15px;
+}
+
+.nav_item>a, .nav_item i {
+  color: #0084F9;
+}
+
+.nav_item i {
+  margin-left: 10px;
+}
+
+.btn_signUp {
+  padding: 10px 18px;
+  border: 1px solid #0084F9;
+  border-radius: 5px;
+  color: #0084F9;
+}
+
+/* HEADER BODY */
+
+.header_body {
+  width:100%;
+  margin-top: 80px;
+}
+
+.getStarted_area, .headline_area {
+  position: relative;
+}
+
+.headline_area h1 {
+  font-size: 55px;
+  font-weight: bold;
+}
+
+.headline_area h3 {
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 35px;
+}
+
+.getStarted_area .card {
+  width: 95%;
+  margin:0 auto;
+}
+
+.getStarted_area h3 {
+  color: #051B4E;
+  font-weight: bold;
+  font-size: 30px;
+}
+.getStarted_area h4 {
+
+  color: #2568FF;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.getStarted_area form input {
+  height: 50px;
+  font-size: 20px;
+  border: 1px solid #f1f1f1;
+}
+
+.getStarted_area form input::placeholder {
+    font-size: 20px;
+    line-height: 50px;
+    color: rgba(3,27,78,.7);
+    opacity: 1;
+}
+.getStarted_area form input:focus {
+  border: 1px solid #2568FF;
+  padding-top: 20px;
+  transition: 1s;
+}
+
+.btn_form {
+  width:100%;
+  font-size: 18px;
+  font-weight: bold;
+  height: 50px;
+  border-radius: 7px;
+}
+.btn_form:hover {
+  transition: 0.5s;
+}
+
+.btn_createAccount {
+  background: #2568FF;
+  color: white;
+}
+
+.btn_createAccount:hover {
+  background: #2033FF;
+  color: white;
+}
+
+.btn_signWithGoogle {
+  color: #757575;
+  border:1px solid lightgrey;
+ box-shadow: 1px 1px lightgrey;
+ position: relative;
+}
+
+.btn_signWithGoogle img {
+  position: absolute;
+  top:50%;
+  left: 20px;
+  transform: translateY(-50%);
+}
+
+@media all and (max-width:400px) {
+  .btn_signWithGoogle img {
+    display: none;
+  }
+}
+
+.btn_signWithGoogle:hover {
+  color: #757575;
+  background: #EEEEEE;
+}
+
+.getStarted_area form span {
+color: rgba(3, 27, 78, 0.7)
+}
+
+.getStarted_area form span>a {
+ color: #0069ff;
+  text-decoration: underline;
+}
+
+
+/* TRUSTED SECTION */
+
+.trusted_section {
+  background: #F3F5F9;
+}
+.trusted_section p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #A5ADC2
+}
+
+.trusted_section .images_cnt {
+  position: relative;
+}
+
+.trusted_section .image_cnt {
+  position: relative;
+  height: 50px;
+  margin-bottom: 50px;
+}
+
+.trusted_section .image_cnt>img {
+  max-width: 85%;
+}
+@media all and (max-width: 400px) {
+
+  .trusted_section p {
+    font-size: 15px;
+    font-weight: bold;
+    color: #A5ADC2
+  }
+
+  .trusted_section .image_cnt>img {
+    max-width: 90%;
+  }
+
+}
+
+a.customerStories {
+  color: #005fe6;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+a.customerStories>i {
+  font-size: 15px;
+  vertical-align: middle;
+}
+
+
+@media all and (max-width: 400px) {
+
+  a.customerStories {
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  a.customerStories>i {
+    font-size: 10px;
+    vertical-align: middle;
+  }
+}
+
+/* DEPLOY AND SCALE */
+
+.deployAndScale_section>.content_area h3 {
+  font-size: 35px;
+  font-weight: bold;
+  color:#031b4e;
+}
+.deployAndScale_section>.content_area h5 {
+  font-size: 20px;
+  line-height: 30px;
+  color:rgba(3, 27, 78, 0.7);
+}
+
+.deployAndScale_section .features_list {
+  list-style: none;
+}
+
+.deployAndScale_section .features_list li {
+  border-left: 3px solid #E5E8ED;
+  padding: 10px 15px;
+  font-size: 20px;
+}
+
+.deployAndScale_section .features_list li:hover {
+  transition: 0.3s;
+  border-left: 6px solid #0069ff;
+  color: #0069ff;
+  font-weight: bold;
+}
+
+.deploy_features img {
+  margin-bottom: 5px;
+}
+
+.deploy_features h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.deploy_features p {
+  font-size: 15px;
+}
+/* DESIGNED FOR DEVELOPERS */
+
+.forDevelopers_section {
+  background: #F3F5F9;
+}
+
+.forDevelopers_section>.content_area h3 {
+  font-size: 35px;
+  font-weight: bold;
+  color:#031b4e;
+}
+.forDevelopers_section>.content_area h5 {
+  font-size: 20px;
+  line-height: 30px;
+  color:rgba(3, 27, 78, 0.7);
+}
+
+.forDevelopers_section img,.forDevelopers_section .image_cnt  {
+  width: 100%;
+}
+
+@media all and (min-width:768px) {
+
+  .forDevelopers_section .image_cnt>img {
+      max-width: 70%;
+    }
+
+  .forDevelopers_section .image_cnt::after,
+  .forDevelopers_section .image_cnt::before {
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 40px;
+    cursor:pointer;
+    color: black;
+  }
+
+  .forDevelopers_section .image_cnt::before {
+    color: grey;
+    content: "\f104";
+    padding-right: 10px;
+  }
+
+  .forDevelopers_section .image_cnt::after {
+    color: black;
+    content: "\f105";
+    padding-left: 10px;
+  }
+
+}
+
+.forDevelopers_section p {
+  color: rgba(3, 27, 78, 0.7);
+  font-size: 17px;
+}
+
+/* NEEDED FEATURES */
+.neededFeatures_section h3{
+font-size: 35px;
+font-weight: bold;
+color:#031b4e;
+}
+
+.neededFeatures_section h5 {
+  font-size: 20px;
+  line-height: 30px;
+  color:rgba(3, 27, 78, 0.7);
+  font-weight: bold;
+}
+
+.neededFeatures_section .feature p {
+  font-size: 16px;
+  color:rgba(3, 27, 78, 0.7);
+}
+
+.neededFeatures_section .feature a {
+  font-size: 16px;
+  font-weight: 500;
+  color: #2568FF;
+}
+.neededFeatures_section .feature a>i {
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+
+/* SERVICES  */
+
+.services_section {
+  background-image: url('https://www.digitalocean.com/assets//media/homepage/data-center-map-8227272d.svg'),linear-gradient(180deg,#0047c6 0,#001d99);
+  padding-top: 130px;
+  padding-bottom: 90px;
+}
+
+.services_section h3{
+  margin: 0 auto;
+  max-width: 60%;
+  font-size: 35px;
+  font-weight: bold;
+  color: white;
+}
+
+.services_section .regions_cnt .regions_col {
+  padding: 30px;
+}
+
+.services_section .regions_cnt .regions_col .region {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid white;
+}
+
+.services_section .region .region_code {
+  font-weight: bold;
+}
+
+.services_section .region .region_location {
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.5;
+}
+
+.services_section .region .region_speedTest>a {
+  font-size: 12px;
+  font-weight: bold;
+  color: rgb(0, 215, 210)
+}
+.services_section .region .region_speedTest>a:hover {
+  transition: 0.2s;
+  color: #0069ff
+}
+
+.services_section .region>.region_speedTest>a>i {
+  margin-left: 10px;
+}
+
+
+
+/* TEAMS LOVE */
+
+.teamsLove_section {
+    background: #F3F5F9;
+}
+.teamsLove_section .content_area>h3 {
+  font-size: 35px;
+  font-weight: bold;
+  color:#031b4e;
+}
+
+.teamsLove_section .tab_pager_cnt,
+.teamsLove_section .tab {
+  position:relative;
+  height:400px;
+}
+
+@media all and (min-width: 400px) and (max-width: 550px) {
+
+  .teamsLove_section .tab_pager_cnt,
+  .teamsLove_section .tab {
+    position:relative;
+    height:450px;
+  }
+
+}
+
+@media all and (max-width: 400px) {
+
+  .teamsLove_section .tab_pager_cnt,
+  .teamsLove_section .tab {
+    position:relative;
+    height:550px;
+  }
+
+}
+
+.tab_pager_cnt .tab_pager {
+  font-size: 40px;
+  color:grey;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+.tab_pager_cnt .tab_pager.is_higlighted {
+  color: #031b4e;
+}
+
+.tab_pager_cnt .tab_pager:hover {
+  color: #2568FF;
+}
+
+.teamsLove_section .content_area .tab {
+  text-align: center;
+  background-color: white;
+  padding: 20px 40px;
+}
+
+.teamsLove_section .tab>img {
+  width: 170px;
+}
+
+.teamsLove_section .tab p.tab_headline {
+  font-size: 24px;
+  font-weight: lighter;
+  color: rgba(3, 27, 78, 0.7);
+}
+
+.teamsLove_section .tab p.tab_owner {
+  font-size: 18px;
+  font-weight: bold;
+  color: rgba(3, 27, 78, 0.7);
+}
+
+.teamsLove_section .tab p.tab_owner_role {
+  font-size: 12px;
+  color: rgba(3, 27, 78, 0.7);
+}
+
+.teamsLove_section .tab a {
+  font-size: 16px;
+  font-weight: 500;
+  color: #2568FF;
+}
+
+
+/* SIGNUP_CLAIM (pre-footer)*/
+
+.signUp_claim_section {
+      background-image: linear-gradient(180deg,#0242bc 0,#001e9a);
+}
+
+.signUp_claim_section h3 {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.btn_createAccount_white {
+  padding: 13px 30px;
+  font-weight: bold;
+  font-size: 18px;
+  background: white;
+  color: #2568FF;
+}
+.btn_createAccount_white:hover {
+  transition: opacity 0.2s;
+  opacity: 0.7;
+  color: #2568FF;
+}
+
+/* FOOTER */
+
+footer {
+  background: #010E28;
+}
+
+footer .content_area .footer_col {
+  margin-bottom: 20px;
+}
+
+footer p {
+  color: white;
+}
+
+footer .copyright {
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 30px;
+}
+footer li {
+  margin-bottom: 5px;
+}
+
+footer li>a {
+  color: rgba(255, 255, 255, 0.5);
+}
+footer .social_link {
+  color: rgba(255, 255, 255, 0.5);
+  margin-right: 10px;
+}
+
+footer li>a:hover {
+  color:white;
+}
+
+.social_link:hover {
+  transition: 0.3s;
+  filter: brightness(0) invert(1);
+}
