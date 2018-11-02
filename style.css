@@ -1,3 +1,4 @@
+/* DIGITAL-OCEAN - Style.css */
 
 * {
   margin: 0;
@@ -6,16 +7,42 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-a, a:hover {
-  text-decoration: none;
-  cursor: pointer;
+/* MAIN SECTIONS BACKGROUNDS*/
+
+header {
+  background: url('https://www.digitalocean.com/assets//media/homepage/hero-background-c9490927.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
 }
 
-li {
-  list-style: none;
+.trusted_section {
+  background: #F3F5F9;
 }
 
-/* CSS ELEMENTS */
+.forDevelopers_section {
+  background: #F3F5F9;
+}
+
+.services_section {
+  background-image: url('https://www.digitalocean.com/assets//media/homepage/data-center-map-8227272d.svg'),linear-gradient(180deg,#0047c6 0,#001d99);
+  padding-top: 130px;
+  padding-bottom: 90px;
+}
+
+.teamsLove_section {
+  background: #F3F5F9;
+}
+
+.signUp_claim_section {
+  background-image: linear-gradient(180deg,#0242bc 0,#001e9a);
+}
+
+footer {
+  background: #010E28;
+}
+
+/*RECURRING ELEMENTS */
 
 .content_area {
   position:relative;
@@ -36,25 +63,12 @@ li {
   background:#2568FF
 }
 
-/* HEADER */
-
-header {
-  background: url('https://www.digitalocean.com/assets//media/homepage/hero-background-c9490927.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-}
-
 /* HEADER NAV */
 
 nav {
   width:100%;
   height: 80px;
   line-height: 80px;
-  position: fixed;
-  top:0;
-  left: 0;
-  z-index: 1;
   font-weight: bold;
   background: white;
 }
@@ -91,6 +105,11 @@ nav {
   border-radius: 5px;
   color: #0084F9;
 }
+.btn_signUp:hover {
+  transition: 0.5s;
+  color: white;
+  background: #315AC2;
+}
 
 /* HEADER BODY */
 
@@ -104,13 +123,13 @@ nav {
 }
 
 .headline_area h1 {
-  font-size: 55px;
+  font-size: 50px;
   font-weight: bold;
 }
 
 .headline_area h3 {
   font-weight: 300;
-  font-size: 22px;
+  font-size: 18px;
   line-height: 35px;
 }
 
@@ -125,7 +144,6 @@ nav {
   font-size: 30px;
 }
 .getStarted_area h4 {
-
   color: #2568FF;
   font-weight: bold;
   font-size: 30px;
@@ -138,10 +156,10 @@ nav {
 }
 
 .getStarted_area form input::placeholder {
-    font-size: 20px;
-    line-height: 50px;
-    color: rgba(3,27,78,.7);
-    opacity: 1;
+  font-size: 20px;
+  line-height: 50px;
+  color: rgba(3,27,78,.7);
+  opacity: 1;
 }
 .getStarted_area form input:focus {
   border: 1px solid #2568FF;
@@ -151,11 +169,12 @@ nav {
 
 .btn_form {
   width:100%;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: bold;
   height: 50px;
   border-radius: 7px;
 }
+
 .btn_form:hover {
   transition: 0.5s;
 }
@@ -173,8 +192,8 @@ nav {
 .btn_signWithGoogle {
   color: #757575;
   border:1px solid lightgrey;
- box-shadow: 1px 1px lightgrey;
- position: relative;
+  box-shadow: 1px 1px lightgrey;
+  position: relative;
 }
 
 .btn_signWithGoogle img {
@@ -184,7 +203,13 @@ nav {
   transform: translateY(-50%);
 }
 
-@media all and (max-width:400px) {
+@media all and (min-width: 768px) and (max-width:991px) {
+  .btn_signWithGoogle img {
+    left: 10px;
+  }
+}
+
+@media all and (max-width:450px) {
   .btn_signWithGoogle img {
     display: none;
   }
@@ -196,20 +221,17 @@ nav {
 }
 
 .getStarted_area form span {
-color: rgba(3, 27, 78, 0.7)
+  color: rgba(3, 27, 78, 0.7)
 }
 
 .getStarted_area form span>a {
- color: #0069ff;
+  color: #0069ff;
   text-decoration: underline;
 }
 
 
 /* TRUSTED SECTION */
 
-.trusted_section {
-  background: #F3F5F9;
-}
 .trusted_section p {
   font-size: 18px;
   font-weight: bold;
@@ -281,10 +303,6 @@ a.customerStories>i {
   color:rgba(3, 27, 78, 0.7);
 }
 
-.deployAndScale_section .features_list {
-  list-style: none;
-}
-
 .deployAndScale_section .features_list li {
   border-left: 3px solid #E5E8ED;
   padding: 10px 15px;
@@ -311,11 +329,8 @@ a.customerStories>i {
 .deploy_features p {
   font-size: 15px;
 }
-/* DESIGNED FOR DEVELOPERS */
 
-.forDevelopers_section {
-  background: #F3F5F9;
-}
+/* DESIGNED FOR DEVELOPERS */
 
 .forDevelopers_section>.content_area h3 {
   font-size: 35px;
@@ -335,8 +350,8 @@ a.customerStories>i {
 @media all and (min-width:768px) {
 
   .forDevelopers_section .image_cnt>img {
-      max-width: 70%;
-    }
+    max-width: 70%;
+  }
 
   .forDevelopers_section .image_cnt::after,
   .forDevelopers_section .image_cnt::before {
@@ -371,10 +386,11 @@ a.customerStories>i {
 }
 
 /* NEEDED FEATURES */
+
 .neededFeatures_section h3{
-font-size: 35px;
-font-weight: bold;
-color:#031b4e;
+  font-size: 35px;
+  font-weight: bold;
+  color:#031b4e;
 }
 
 .neededFeatures_section h5 {
@@ -394,19 +410,13 @@ color:#031b4e;
   font-weight: 500;
   color: #2568FF;
 }
+
 .neededFeatures_section .feature a>i {
   margin-left: 10px;
   vertical-align: middle;
 }
 
-
 /* SERVICES  */
-
-.services_section {
-  background-image: url('https://www.digitalocean.com/assets//media/homepage/data-center-map-8227272d.svg'),linear-gradient(180deg,#0047c6 0,#001d99);
-  padding-top: 130px;
-  padding-bottom: 90px;
-}
 
 .services_section h3{
   margin: 0 auto;
@@ -441,6 +451,7 @@ color:#031b4e;
   font-weight: bold;
   color: rgb(0, 215, 210)
 }
+
 .services_section .region .region_speedTest>a:hover {
   transition: 0.2s;
   color: #0069ff
@@ -450,13 +461,8 @@ color:#031b4e;
   margin-left: 10px;
 }
 
-
-
 /* TEAMS LOVE */
 
-.teamsLove_section {
-    background: #F3F5F9;
-}
 .teamsLove_section .content_area>h3 {
   font-size: 35px;
   font-weight: bold;
@@ -539,12 +545,7 @@ color:#031b4e;
   color: #2568FF;
 }
 
-
 /* SIGNUP_CLAIM (pre-footer)*/
-
-.signUp_claim_section {
-      background-image: linear-gradient(180deg,#0242bc 0,#001e9a);
-}
 
 .signUp_claim_section h3 {
   font-weight: bold;
@@ -566,10 +567,6 @@ color:#031b4e;
 
 /* FOOTER */
 
-footer {
-  background: #010E28;
-}
-
 footer .content_area .footer_col {
   margin-bottom: 20px;
 }
@@ -578,23 +575,23 @@ footer p {
   color: white;
 }
 
-footer .copyright {
+footer .copyright, footer .categoryList li>a , footer .social_link {
   color: rgba(255, 255, 255, 0.5);
+}
+
+footer .copyright {
   margin-bottom: 30px;
 }
-footer li {
+
+footer .categoryList li {
   margin-bottom: 5px;
 }
 
-footer li>a {
-  color: rgba(255, 255, 255, 0.5);
-}
 footer .social_link {
-  color: rgba(255, 255, 255, 0.5);
   margin-right: 10px;
 }
 
-footer li>a:hover {
+footer .categoryList li>a:hover {
   color:white;
 }
 
